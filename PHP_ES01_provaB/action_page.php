@@ -13,7 +13,11 @@
 		//	$Email = $_POST["Email"];
 			$Psw = $_POST["Psw"];
 
-			echo "<p>Benvenuto " . $Nome . " " . $Psw . " nell'area riservata del tuo sito</p>";
+			if($Nome!="Marco" || $Psw!="1234")
+				echo "Accesso negato. <br> Username o password errati.";
+			else
+				echo "Area persona di: ". $Nome . ".";
+
 		?>
 
 	</body>
